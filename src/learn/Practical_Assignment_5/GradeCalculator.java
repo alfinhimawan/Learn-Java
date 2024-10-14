@@ -6,7 +6,16 @@ public class GradeCalculator {
     public static void main(String[] args) {
         // Input nilai dari pengguna melalui JOptionPane
         String inputNilai = JOptionPane.showInputDialog("Masukkan nilai:");
-        double nilai = Double.parseDouble(inputNilai); // Konversi string ke angka
+
+        // Validasi input dan konversi
+        double nilai;
+        try {
+            nilai = Double.parseDouble(inputNilai); // Konversi string ke angka
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Input tidak valid. Mohon masukkan angka yang benar.");
+            return; // Menghentikan eksekusi lebih lanjut
+        }
+        
         String grade = "";
 
         // Menentukan grade berdasarkan nilai yang dimasukkan

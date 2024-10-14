@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class RangeCalculator {
     public static void main(String[] args) {
         // Input grade dari pengguna melalui JOptionPane
-        String grade = JOptionPane.showInputDialog("Masukkan grade:").toUpperCase();
+        String grade = JOptionPane.showInputDialog("Masukkan grade :").toUpperCase();
         String range = "";
 
         // Menentukan jangkauan nilai berdasarkan grade yang dimasukkan
